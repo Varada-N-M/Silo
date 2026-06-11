@@ -1,0 +1,35 @@
+# ================================================================
+# FullStack Agent — Complete Dependencies
+# ================================================================
+# Install: pip install -r requirements.txt
+# Ollama models (separate): ollama pull nomic-embed-text codellama
+# ================================================================
+
+
+# ── Agent Core ───────────────────────────────────────────────────
+chromadb>=1.5.9             # vector store — knowledge base + project RAG
+ollama>=0.6.2               # Ollama Python client (embeddings + LLM)
+python-dotenv>=1.2.2        # load .env config
+
+
+# ── FastAPI Backend (for projects you build with the agent) ──────
+fastapi>=0.136.3            # async web framework
+uvicorn[standard]>=0.49.0   # ASGI server (includes websockets + watchfiles)
+pydantic>=2.13.4            # data validation (v2)
+pydantic-settings>=2.14.1   # settings via BaseSettings + .env
+
+
+# ── Database ─────────────────────────────────────────────────────
+sqlalchemy>=2.0.50          # ORM — async support via 2.x mapped_column API
+asyncpg>=0.31.0             # async PostgreSQL driver (used by SQLAlchemy)
+alembic>=1.18.4             # database migrations
+
+
+# ── Authentication ───────────────────────────────────────────────
+python-jose[cryptography]>=3.5.0   # JWT encode/decode (HS256)
+passlib[bcrypt]>=1.7.4             # password hashing
+bcrypt>=5.0.0                      # bcrypt backend for passlib
+
+
+# ── HTTP (optional — for server-side fetch helpers) ──────────────
+httpx>=0.27.0               # async HTTP client (useful for testing FastAPI)

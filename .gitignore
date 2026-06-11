@@ -1,0 +1,87 @@
+# ================================================================
+# FullStack Agent — .gitignore
+# ================================================================
+
+
+# ── Vector Store (auto-regenerated on first run) ─────────────────
+.chroma/
+chroma_db/
+
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env.bak
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+.pytype/
+.pyre/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.xml
+coverage.xml
+
+# ── Environment & Secrets ────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets.json
+
+
+# ── Next.js (for projects built with the agent) ──────────────────
+node_modules/
+.next/
+out/
+.vercel/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts
+
+
+# ── Database ─────────────────────────────────────────────────────
+*.sqlite
+*.sqlite3
+*.db
+
+# Alembic — keep versions folder but ignore compiled artifacts
+alembic/versions/__pycache__/
+
+
+# ── IDEs & Editors ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/
